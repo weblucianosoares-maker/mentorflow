@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Balance</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .phone-container {
+            width: 390px;
+            height: 844px;
+            background: #000;
+            border-radius: 55px;
+            padding: 12px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #0a0e14 0%, #1a1f2e 100%);
+            border-radius: 45px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 35px;
+            background: #000;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+
+        .status-bar {
+            padding: 50px 25px 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .bank-app {
+            padding: 20px 25px;
+        }
+
+        .bank-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .bank-logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #d4af37;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .account-type {
+            color: #94a3b8;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .balance-container {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            border-radius: 25px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .balance-label {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .balance-amount {
+            color: #d4af37;
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .balance-cents {
+            font-size: 32px;
+        }
+
+        .account-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-label {
+            color: #64748b;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            color: #e2e8f0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .action-btn {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 20px 10px;
+            text-align: center;
+            color: #d4af37;
+            font-size: 11px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="notch"></div>
+
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>100%</span>
+            </div>
+
+            <div class="bank-app">
+                <div class="bank-header">
+                    <div class="bank-logo">ELITE BANK</div>
+                    <div class="account-type">Conta Premium</div>
+                </div>
+
+                <div class="balance-container">
+                    <div class="balance-label">Saldo Disponível</div>
+                    <div class="balance-amount">
+                        R$ 10.599.850<span class="balance-cents">,10</span>
+                    </div>
+                </div>
+
+                <div class="account-info">
+                    <div class="info-item">
+                        <div class="info-label">Agência</div>
+                        <div class="info-value">0001</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Conta</div>
+                        <div class="info-value">123456-7</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Tipo</div>
+                        <div class="info-value">Premium</div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <div class="action-btn">PIX</div>
+                    <div class="action-btn">Pagar</div>
+                    <div class="action-btn">Transferir</div>
+                    <div class="action-btn">Investir</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
